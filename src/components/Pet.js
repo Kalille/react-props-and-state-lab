@@ -1,28 +1,13 @@
 import React from 'react';
 import PetBrowser from './PetBrowser.js';
-import pets from './pets.js'
+
 
 
 class Pet extends React.Component {
-  constructor(props){
-    super(props)
-  }
-  generatePetCards = () => {
-    
-   
   
-   return pets.map(( index) => <PetBrowser 
-         name={pets.name}
-         gender={pets.gender} 
-           type={pets.type}
-           age={pets.age}
-           weight={pets.weight}
-
-        key={index}
-      /> )
   
-  }
   render() {
+    console.log('pet props',this.props)
     return (
       <div className="card">
         <div className="content">

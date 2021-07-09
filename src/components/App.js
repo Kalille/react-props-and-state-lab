@@ -28,10 +28,13 @@ class App extends React.Component {
       }
 
       fetch(baseUrl)
-      .then(res=>res.json)
-      .then(petData=>this.setState({
+      .then(res=>res.json())
+      .then(petData=>{
+        console.log('pet data',petData)
+        this.setState({
         pets: petData
-      }))
+      })}
+      )
   
 
     }
